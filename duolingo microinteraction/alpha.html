@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start a Lesson — Microinteraction Study</title>
+  <meta name="description" content="Alpha microinteraction study: starting a new lesson on Duolingo's Learn path.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ TOP BAR ============ -->
+  <header class="topbar">
+    <a class="brand" href="#top">
+      <span class="brand-node"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></span>
+      Microinteraction Lab
+    </a>
+    <nav class="nav">
+      <a href="#url">URL</a>
+      <a href="#triggers">Triggers</a>
+      <a href="#rules">Rules</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#loops">Loops &amp; Modes</a>
+      <a href="#visuals">Visuals</a>
+    </nav>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow">Alpha · Simple Microinteraction</span>
+        <h1>Starting a new lesson on Duolingo</h1>
+        <p>A close look at the small, bouncy moment between opening the Learn path and jumping into your next lesson: the floating tag, the squishy button, and the popover that pops out underneath.</p>
+        <a class="btn btn--white" href="#visuals">See it in action</a>
+      </div>
+
+      <div class="hero-card">
+        <div class="stage stage--idle stage--hero" aria-hidden="true">
+          <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+          <div class="lesson">
+            <div class="tag">START</div>
+            <div class="node node--active"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
+          </div>
+          <span class="dot d4"></span><span class="dot d5"></span>
+          <div class="node node--locked"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V7a3 3 0 0 0-6 0v3z"/></svg></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+
+    <!-- ============ 01 URL ============ -->
+    <section class="card card--blue" id="url">
+      <span class="chip chip--blue">01</span>
+      <h2>Original interface</h2>
+      <p>The microinteraction lives on Duolingo's <strong>Learn</strong> tab, on the lesson path: the winding map of circular lesson buttons connected by little dots.</p>
+      <div class="url-box">
+        <code>https://www.duolingo.com/learn</code>
+        <a class="btn btn--blue" href="https://www.duolingo.com/learn" target="_blank" rel="noopener">Visit site</a>
+      </div>
+      <ul class="checklist">
+        <li>Be on the <strong>Learn</strong> tab (left sidebar).</li>
+        <li>Be on the <strong>path map</strong> with the circles and connecting dots.</li>
+        <li>You need to be signed in to see your own path.</li>
+      </ul>
+    </section>
+
+    <!-- ============ 02 TRIGGERS ============ -->
+    <section class="card card--green" id="triggers">
+      <span class="chip chip--green">02</span>
+      <h2>Triggers</h2>
+      <p>The interaction has one <strong>system trigger</strong> that sets the stage and several <strong>user triggers</strong> that move it forward.</p>
+      <ol class="steps">
+        <li>
+          <span class="step-label">System</span>
+          <div><h3>Landing on the Learn path</h3>
+          <p>When the path loads, Duolingo finds your next unlocked lesson and places a floating <strong>START</strong> tag above it. No input is needed; the page itself starts the microinteraction.</p></div>
+        </li>
+        <li>
+          <span class="step-label">Hover in</span>
+          <div><h3>Cursor enters the lesson button</h3>
+          <p>Moving the mouse over the round lesson button changes the cursor to a pointer and pushes the button down slightly.</p></div>
+        </li>
+        <li>
+          <span class="step-label">Hover out</span>
+          <div><h3>Cursor leaves the button</h3>
+          <p>Moving off the button without clicking lets it spring all the way back up to its resting position.</p></div>
+        </li>
+        <li>
+          <span class="step-label">Click / tap</span>
+          <div><h3>Pressing the button</h3>
+          <p>Clicking pushes the button down completely and opens a popover underneath it.</p></div>
+        </li>
+        <li>
+          <span class="step-label">Hover in</span>
+          <div><h3>Cursor enters the popover's START button</h3>
+          <p>Hovering the START button inside the popover changes the color of its text, signaling it is ready to launch the lesson.</p></div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ 03 RULES ============ -->
+    <section class="card card--yellow" id="rules">
+      <span class="chip chip--yellow">03</span>
+      <h2>Rules</h2>
+      <div class="rule-grid">
+        <article class="rule">
+          <h3><span class="rule-num">1</span> Only the next lesson gets the spotlight</h3>
+          <p>The floating START tag appears over one button only: the current, unlocked lesson. It keeps bobbing up and down for as long as the user does nothing, and it disappears once that button is pressed and the popover takes over.</p>
+        </article>
+        <article class="rule">
+          <h3><span class="rule-num">2</span> Button depth follows the cursor</h3>
+          <p>The button has three heights. <strong>Resting:</strong> fully raised, with its thick bottom edge showing. <strong>Hovered:</strong> sunk partway. <strong>Pressed:</strong> sunk all the way (the bottom edge disappears) and the popover opens beneath it with the lesson name, progress and a START button. Leaving before clicking always returns the button to resting.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 04 FEEDBACK ============ -->
+    <section class="card card--red" id="feedback">
+      <span class="chip chip--red">04</span>
+      <h2>Feedback</h2>
+      <div class="sense-grid">
+        <article class="sense sense--see">
+          <div class="sense-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 5C6.5 5 2.4 9.2 1 12c1.4 2.8 5.5 7 11 7s9.6-4.2 11-7c-1.4-2.8-5.5-7-11-7zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/></svg>
+          </div>
+          <h3>See</h3>
+          <ul>
+            <li>A white START tag gently floating up and down.</li>
+            <li>The cursor turning into a pointer over the button.</li>
+            <li>The button sinking a little on hover and all the way on click, as its darker bottom edge shrinks.</li>
+            <li>A green popover appearing below with the lesson info.</li>
+            <li>The START button's text changing color on hover.</li>
+          </ul>
+        </article>
+        <article class="sense sense--hear">
+          <div class="sense-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>
+          </div>
+          <h3>Hear</h3>
+          <p>Nothing. The path map stays silent. Duolingo saves its sound effects for inside the lesson, so the map feels calm and doesn't nag.</p>
+        </article>
+        <article class="sense sense--feel">
+          <div class="sense-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28"><path d="M9 11.2V6.5a2 2 0 0 1 4 0V11h1V9.5a2 2 0 0 1 4 0V11h.5a1.5 1.5 0 0 1 1.5 1.5V17a6 6 0 0 1-6 6h-1.6a6 6 0 0 1-4.9-2.5L3.4 16a1.7 1.7 0 0 1 2.7-2.1L9 17.2z"/></svg>
+          </div>
+          <h3>Feel</h3>
+          <p>There is no physical vibration on desktop, but the button <em>feels</em> physical. The thick bottom edge collapsing as you press makes it look like a real, squishy button being pushed into the page.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ 05 LOOPS & MODES ============ -->
+    <section class="card card--purple" id="loops">
+      <span class="chip chip--purple">05</span>
+      <h2>Loops &amp; Modes</h2>
+      <div class="split">
+        <div>
+          <h3 class="sub-title">Loops</h3>
+          <ul class="pill-list">
+            <li><strong>Idle loop:</strong> the START tag bobs up and down forever until the button is pressed.</li>
+            <li><strong>Hover loop:</strong> hovering in and out can repeat endlessly; the button sinks and rises every time with no limit.</li>
+            <li><strong>Long loop:</strong> after a lesson is finished, the START tag moves to the next node on the path, and the whole microinteraction starts again there.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="sub-title">Modes</h3>
+          <ul class="pill-list">
+            <li><strong>Locked mode:</strong> gray nodes further down the path have no START tag and can't start a lesson yet.</li>
+            <li><strong>Completed mode:</strong> finished nodes change color and offer practice instead of a new lesson.</li>
+            <li><strong>Popover-open mode:</strong> the START tag is hidden while the popover is open; clicking elsewhere closes it and returns the button to resting.</li>
+            <li><strong>Touch mode:</strong> on phones there is no hover, so a tap skips straight to the pressed state.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 VISUALS ============ -->
+    <section class="card card--orange" id="visuals">
+      <span class="chip chip--orange">06</span>
+      <h2>How it works, step by step</h2>
+      <p>Each panel is a looping animation of one state. The cursor shows where the mouse is.</p>
+
+      <div class="legend">
+        <span><svg class="legend-cursor" viewBox="0 0 22 28" width="18" height="23"><path d="M2 2v21l5.5-5 3.6 8.2 3.6-1.6-3.5-8.1H18z" fill="#000" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg> Default cursor</span>
+        <span><svg class="legend-cursor" viewBox="0 0 24 28" width="18" height="23"><path d="M9 1.5a2 2 0 0 1 2 2V11h.6V9a2 2 0 0 1 4 0v2h.6v-.6a2 2 0 0 1 4 0V12a1.6 1.6 0 0 1 2.8 1v5.5c0 4.7-3.4 8-7.8 8h-2c-2.6 0-4.7-1.2-6.2-3.3l-4-5.8a1.9 1.9 0 0 1 3-2.3L7 17V3.5a2 2 0 0 1 2-2z" fill="#fff" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/></svg> Pointer cursor</span>
+      </div>
+
+      <div class="states">
+        <!-- STATE 1 : IDLE -->
+        <figure class="state">
+          <div class="stage stage--idle" aria-hidden="true">
+            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+            <div class="lesson">
+              <div class="tag">START</div>
+              <div class="node node--active"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
+            </div>
+            <span class="dot d4"></span><span class="dot d5"></span>
+            <div class="node node--locked"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V7a3 3 0 0 0-6 0v3z"/></svg></div>
+            <div class="cursor">
+              <svg class="arrow" viewBox="0 0 22 28" width="22" height="28"><path d="M2 2v21l5.5-5 3.6 8.2 3.6-1.6-3.5-8.1H18z" fill="#000" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              <svg class="hand" viewBox="0 0 24 28" width="22" height="28"><path d="M9 1.5a2 2 0 0 1 2 2V11h.6V9a2 2 0 0 1 4 0v2h.6v-.6a2 2 0 0 1 4 0V12a1.6 1.6 0 0 1 2.8 1v5.5c0 4.7-3.4 8-7.8 8h-2c-2.6 0-4.7-1.2-6.2-3.3l-4-5.8a1.9 1.9 0 0 1 3-2.3L7 17V3.5a2 2 0 0 1 2-2z" fill="#fff" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <figcaption>
+            <span class="state-num">1</span>
+            <div><strong>Doing nothing</strong>
+            <p>Cursor rests off to the side. The START tag floats up and down over the raised button.</p></div>
+          </figcaption>
+        </figure>
+
+        <!-- STATE 2 : HOVER -->
+        <figure class="state">
+          <div class="stage stage--hover" aria-hidden="true">
+            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+            <div class="lesson">
+              <div class="tag">START</div>
+              <div class="node node--active"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
+            </div>
+            <span class="dot d4"></span><span class="dot d5"></span>
+            <div class="node node--locked"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V7a3 3 0 0 0-6 0v3z"/></svg></div>
+            <div class="cursor">
+              <svg class="arrow" viewBox="0 0 22 28" width="22" height="28"><path d="M2 2v21l5.5-5 3.6 8.2 3.6-1.6-3.5-8.1H18z" fill="#000" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              <svg class="hand" viewBox="0 0 24 28" width="22" height="28"><path d="M9 1.5a2 2 0 0 1 2 2V11h.6V9a2 2 0 0 1 4 0v2h.6v-.6a2 2 0 0 1 4 0V12a1.6 1.6 0 0 1 2.8 1v5.5c0 4.7-3.4 8-7.8 8h-2c-2.6 0-4.7-1.2-6.2-3.3l-4-5.8a1.9 1.9 0 0 1 3-2.3L7 17V3.5a2 2 0 0 1 2-2z" fill="#fff" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <figcaption>
+            <span class="state-num">2</span>
+            <div><strong>Hovering</strong>
+            <p>Cursor moves onto the button and becomes a pointer. The button sinks down slightly.</p></div>
+          </figcaption>
+        </figure>
+
+        <!-- STATE 3 : HOVER OUT -->
+        <figure class="state">
+          <div class="stage stage--leave" aria-hidden="true">
+            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+            <div class="lesson">
+              <div class="tag">START</div>
+              <div class="node node--active"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
+            </div>
+            <span class="dot d4"></span><span class="dot d5"></span>
+            <div class="node node--locked"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V7a3 3 0 0 0-6 0v3z"/></svg></div>
+            <div class="cursor">
+              <svg class="arrow" viewBox="0 0 22 28" width="22" height="28"><path d="M2 2v21l5.5-5 3.6 8.2 3.6-1.6-3.5-8.1H18z" fill="#000" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              <svg class="hand" viewBox="0 0 24 28" width="22" height="28"><path d="M9 1.5a2 2 0 0 1 2 2V11h.6V9a2 2 0 0 1 4 0v2h.6v-.6a2 2 0 0 1 4 0V12a1.6 1.6 0 0 1 2.8 1v5.5c0 4.7-3.4 8-7.8 8h-2c-2.6 0-4.7-1.2-6.2-3.3l-4-5.8a1.9 1.9 0 0 1 3-2.3L7 17V3.5a2 2 0 0 1 2-2z" fill="#fff" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <figcaption>
+            <span class="state-num">3</span>
+            <div><strong>Not hovering</strong>
+            <p>Cursor slides back off the button without clicking. The button springs all the way back up.</p></div>
+          </figcaption>
+        </figure>
+
+        <!-- STATE 4 : PRESSED -->
+        <figure class="state">
+          <div class="stage stage--press" aria-hidden="true">
+            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
+            <div class="lesson">
+              <div class="tag">START</div>
+              <div class="node node--active"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
+              <div class="popover">
+                <p class="pop-title">Form basic sentences</p>
+                <p class="pop-sub">Lesson 1 of 4</p>
+                <span class="pop-btn">START +10 XP</span>
+              </div>
+            </div>
+            <span class="dot d4"></span><span class="dot d5"></span>
+            <div class="node node--locked"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V7a3 3 0 0 0-6 0v3z"/></svg></div>
+            <div class="cursor">
+              <svg class="arrow" viewBox="0 0 22 28" width="22" height="28"><path d="M2 2v21l5.5-5 3.6 8.2 3.6-1.6-3.5-8.1H18z" fill="#000" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
+              <svg class="hand" viewBox="0 0 24 28" width="22" height="28"><path d="M9 1.5a2 2 0 0 1 2 2V11h.6V9a2 2 0 0 1 4 0v2h.6v-.6a2 2 0 0 1 4 0V12a1.6 1.6 0 0 1 2.8 1v5.5c0 4.7-3.4 8-7.8 8h-2c-2.6 0-4.7-1.2-6.2-3.3l-4-5.8a1.9 1.9 0 0 1 3-2.3L7 17V3.5a2 2 0 0 1 2-2z" fill="#fff" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/></svg>
+            </div>
+          </div>
+          <figcaption>
+            <span class="state-num">4</span>
+            <div><strong>Pressed</strong>
+            <p>Cursor clicks. The button sinks all the way, the popover appears underneath, and hovering its START button changes the text color.</p></div>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ FUTURE BUTTON SLOT ============ -->
+    <section class="lab" id="lab">
+      <span class="chip chip--green">Coming soon</span>
+      <h2>The live button</h2>
+      <p>This is where the working microinteraction button will go once it's built.</p>
+      <!-- Drop the finished button markup here -->
+      <div class="lab-slot"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>Microinteractions · Alpha project · Fall 2026</p>
+    <p class="footer-note">A class study of Duolingo's interface. Not affiliated with or endorsed by Duolingo.</p>
+  </footer>
+
+</body>
+</html>
