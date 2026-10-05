@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Duolingo Button Microinteraction</title>
+  <title>Duolingo Button Microinteraction!</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -13,19 +13,19 @@
 
   <header class="header">
     <div class="wrap">
-      <h1>Duolingo Button Microinteraction</h1>
+      <h1>Duolingo Button Microinteraction!</h1>
     </div>
   </header>
 
   <main class="wrap">
 
-    <!-- Button -->
+    <!--button will go here-->
     <section class="box box--button">
-      <!-- Put the finished button here -->
-      <p>Button coming soon</p>
+      <!-- put the finished button here -->
+      <p>Button coming soon! :D</p>
     </section>
 
-    <!-- Original Interface -->
+    <!-- og interface section -->
     <section class="box">
       <h2>Original Interface</h2>
       <p><a href="https://www.duolingo.com/learn" target="_blank" rel="noopener">https://www.duolingo.com/learn</a></p>
@@ -36,7 +36,7 @@
       </ol>
     </section>
 
-    <!-- Triggers -->
+    <!-- the triggers -->
     <section class="box">
       <h2>Triggers</h2>
       <ol>
@@ -48,7 +48,7 @@
       </ol>
     </section>
 
-    <!-- Rules -->
+    <!-- the rules -->
     <section class="box">
       <h2>Rules</h2>
       <ol>
@@ -57,7 +57,7 @@
       </ol>
     </section>
 
-    <!-- Feedback -->
+    <!-- the feedback -->
     <section class="box">
       <h2>Feedback</h2>
       <ol>
@@ -67,7 +67,7 @@
       </ol>
     </section>
 
-    <!-- Loops & Modes -->
+    <!-- Loops & Modes sectioin -->
     <section class="box">
       <h2>Loops &amp; Modes</h2>
       <h3>Loops</h3>
@@ -85,80 +85,40 @@
       </ol>
     </section>
 
-    <!-- Visuals -->
+    <!-- examples -->
     <section class="box">
       <h2>Visuals</h2>
       <p>Each frame shows one state, with the cursor where the mouse would be.</p>
 
       <div class="frames">
 
-        <!-- 1: Doing nothing -->
+        <!-- doing nothing -->
         <figure class="frame">
-          <div class="stage">
-            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
-            <div class="tag">START</div>
-            <div class="node node--active"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
-            <span class="dot d4"></span><span class="dot d5"></span>
-            <div class="node node--locked"><svg viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V7a3 3 0 0 0-6 0v3z"/></svg></div>
-            <svg class="cursor cursor--away" viewBox="0 0 22 28"><path d="M2 2v21l5.5-5 3.6 8.2 3.6-1.6-3.5-8.1H18z" fill="#000" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="stage"></div>
           <figcaption><strong>1. Doing nothing:</strong> the cursor is off to the side and the START tag floats above the raised button.</figcaption>
         </figure>
 
-        <!-- 2: Hovering -->
+        <!-- hovering -->
         <figure class="frame">
-          <div class="stage">
-            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
-            <div class="tag">START</div>
-            <div class="node node--active node--hover"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
-            <span class="dot d4"></span><span class="dot d5"></span>
-            <div class="node node--locked"><svg viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V7a3 3 0 0 0-6 0v3z"/></svg></div>
-            <svg class="cursor cursor--on-node" viewBox="0 0 24 28"><path d="M9 1.5a2 2 0 0 1 2 2V11h.6V9a2 2 0 0 1 4 0v2h.6v-.6a2 2 0 0 1 4 0V12a1.6 1.6 0 0 1 2.8 1v5.5c0 4.7-3.4 8-7.8 8h-2c-2.6 0-4.7-1.2-6.2-3.3l-4-5.8a1.9 1.9 0 0 1 3-2.3L7 17V3.5a2 2 0 0 1 2-2z" fill="#fff" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="stage"></div>
           <figcaption><strong>2. Hovering:</strong> the cursor turns into a pointer and the button presses down slightly.</figcaption>
         </figure>
 
-        <!-- 3: Not hovering -->
+        <!-- not hovering on it -->
         <figure class="frame">
-          <div class="stage">
-            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
-            <div class="tag">START</div>
-            <div class="node node--active"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
-            <span class="dot d4"></span><span class="dot d5"></span>
-            <div class="node node--locked"><svg viewBox="0 0 24 24"><path d="M7 10V7a5 5 0 0 1 10 0v3h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h1zm2 0h6V7a3 3 0 0 0-6 0v3z"/></svg></div>
-            <span class="trail"></span>
-            <svg class="cursor cursor--left" viewBox="0 0 22 28"><path d="M2 2v21l5.5-5 3.6 8.2 3.6-1.6-3.5-8.1H18z" fill="#000" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="stage"></div>
           <figcaption><strong>3. Not hovering:</strong> the cursor moves off without clicking (dashed line) and the button goes back up.</figcaption>
         </figure>
 
-        <!-- 4: Pressed -->
+        <!-- button is pressed -->
         <figure class="frame">
-          <div class="stage">
-            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
-            <div class="node node--active node--pressed"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
-            <div class="popover">
-              <p class="pop-title">Form basic sentences</p>
-              <p class="pop-sub">Lesson 1 of 4</p>
-              <span class="pop-btn">START +10 XP</span>
-            </div>
-            <svg class="cursor cursor--on-node" viewBox="0 0 24 28"><path d="M9 1.5a2 2 0 0 1 2 2V11h.6V9a2 2 0 0 1 4 0v2h.6v-.6a2 2 0 0 1 4 0V12a1.6 1.6 0 0 1 2.8 1v5.5c0 4.7-3.4 8-7.8 8h-2c-2.6 0-4.7-1.2-6.2-3.3l-4-5.8a1.9 1.9 0 0 1 3-2.3L7 17V3.5a2 2 0 0 1 2-2z" fill="#fff" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="stage"></div>
           <figcaption><strong>4. Pressed:</strong> the button goes all the way down, the START tag disappears and the popover appears.</figcaption>
         </figure>
 
-        <!-- 5: Hovering popover button -->
+        <!-- hovering on button -->
         <figure class="frame">
-          <div class="stage">
-            <span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span>
-            <div class="node node--active node--pressed"><svg viewBox="0 0 24 24"><path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.2 6.5L12 17.4l-5.9 3.1 1.2-6.5L2.5 9.4l6.6-.9z"/></svg></div>
-            <div class="popover">
-              <p class="pop-title">Form basic sentences</p>
-              <p class="pop-sub">Lesson 1 of 4</p>
-              <span class="pop-btn pop-btn--hover">START +10 XP</span>
-            </div>
-            <svg class="cursor cursor--on-pop-btn" viewBox="0 0 24 28"><path d="M9 1.5a2 2 0 0 1 2 2V11h.6V9a2 2 0 0 1 4 0v2h.6v-.6a2 2 0 0 1 4 0V12a1.6 1.6 0 0 1 2.8 1v5.5c0 4.7-3.4 8-7.8 8h-2c-2.6 0-4.7-1.2-6.2-3.3l-4-5.8a1.9 1.9 0 0 1 3-2.3L7 17V3.5a2 2 0 0 1 2-2z" fill="#fff" stroke="#000" stroke-width="1.5" stroke-linejoin="round"/></svg>
-          </div>
+          <div class="stage"></div>
           <figcaption><strong>5. Hovering START:</strong> the pointer moves onto the popover's START button and its text changes color.</figcaption>
         </figure>
 
@@ -168,7 +128,7 @@
   </main>
 
   <footer class="wrap footer">
-    <p>Microinteractions &middot; Alpha Project. Not affiliated with Duolingo.</p>
+    <p>Microinteractions &middot; Project for Microinteractions by Joshua Gratton.</p>
   </footer>
 
 </body>
